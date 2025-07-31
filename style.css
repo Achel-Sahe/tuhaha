@@ -1,0 +1,465 @@
+:root {
+    --sidebar-width: 260px;
+    --bg-sidebar: #202123;
+    --bg-btn: #343541;
+    --bg-btn-hover:  #626370;
+    --text-color: #ececf1;
+    --bg-body: #F8F2DE;
+    --fourth: #781c1c;
+}
+    /* --bg: #F8F2DE;
+    --scnd: #ECDCBF;
+    --third: #A31D1D;
+    --fourth: #781c1c; */
+
+body {
+    margin: 0;
+    height: 200rem;
+    font-family: 'Inter';
+    background-color: #ffffff;
+}
+h1 {
+    font-size: 2.6rem;
+    text-decoration: 3px underline #781c1c;
+    letter-spacing: 2px;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1.2rem;
+}
+
+.judul{
+    color: #dc0606
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #1f2025;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1100;
+    font-family: 'Poppins';
+}
+
+
+.brand {
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 20px;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #ff1212;
+}
+.nav-title span {
+    color: #fffbd5;
+}
+
+.nav-avatar {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    margin-left: auto;
+    flex-shrink: 0;
+    padding-right: 1.5rem;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: var(--sidebar-width);
+    height: calc(100% - 60px);
+    background: var(--bg-sidebar);
+    color: var(--text-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.close-btn {
+    background: none;
+    color: var(--text-color);
+    font-size: 40px;
+    border: none;
+    align-self: flex-end;
+    margin: 8px;
+    cursor: pointer;
+}
+
+main {
+    transition: margin-left 0.3s ease;
+    -webkit-transition: margin-left 0.3s ease;
+    -moz-transition: margin-left 0.3s ease;
+    -ms-transition: margin-left 0.3s ease;
+    -o-transition: margin-left 0.3s ease;
+}
+
+main.shifted {
+    margin-left: var(--sidebar-width);
+}
+
+
+.chat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 16px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+
+.chat-item {  
+  position: relative;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-color, #ececf1);
+  font-size: 1.2rem;
+}
+
+.chat-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: .7rem;
+  height: 2px;
+  width: 100%;
+  background-color: #cc2020;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+}
+
+/* Hover state */
+.chat-item:hover::after {
+  transform: scaleX(.5);
+  -webkit-transform: scaleX(.5);
+  -moz-transform: scaleX(.5);
+  -ms-transform: scaleX(.5);
+  -o-transform: scaleX(.5);
+}
+
+
+
+/* bacground image  */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+
+.carousel-slide {
+    width: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-overlay {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 10px rgb(154, 0, 0);
+}
+
+.carousel-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: -2rem;
+}
+
+.carousel-overlay p {
+    font-size: 1.2rem;
+}
+/* bacground image end */
+
+/* home information section */
+.home-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+.button-info {
+    background-color: white;
+    width: 16rem;
+    height: 6rem;
+    padding-bottom: 1rem;
+    border: 1px solid rgb(225, 221, 221);
+    box-shadow: 0 5px 10px .6px rgb(209, 209, 209);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-info p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: -.4rem;
+    color: #6d271a;
+}
+.button-info i {
+    font-size: 4rem;
+    color: #951010;
+}
+
+.home-argument, .sambutan, .header-map {
+    padding-left: 3rem;
+    margin-top: 1rem;
+}
+.home-argument p {
+    font-size: 1.6rem;
+    margin-top: -1rem;
+    width: 90%;
+}
+/* home information section end */
+
+/* sambutan  */
+.sambutan {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    margin:3rem 0;
+}
+.sambutan .sambutan-foto img{
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.sambutan .sambutan-isi {
+    width: 50rem;
+}
+.sambutan .sambutan-isi .isi {
+    height: 14rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #b4b4b4 #ffffff;
+    margin-top: 1rem;
+}
+.sambutan-isi h1 {
+    color: #cc2020;
+}
+.si:nth-child(n+1){
+    margin-top: -1.5rem;
+}
+
+
+/* sambutan end */
+.map-wrapper p{
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+}
+.header-map {
+    width: 75%;
+}
+.map-wrapper {
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    margin-top: -2.5rem;
+}
+
+.map iframe{
+    width: 93%;
+    height: 40rem;
+}
+.map{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* Untuk layar laptop*/
+@media (max-width: 1366px) {
+    html {
+        font-size: 78%;
+    }
+    .button-wrapper{
+            flex-wrap: wrap;
+    }
+        .index:nth-child(4) {
+        margin-top: 4rem;
+    }
+    .sambutan {
+        flex-wrap: wrap;
+    }
+    .sambutan-isi{
+        margin-top: 5rem;
+    }
+    .si:nth-child(n-3){
+        text-align: center;
+    }
+    .si:nth-child(3){
+        text-decoration: underline;
+    }
+    .sambutan{
+        padding: .6rem;
+    }
+}
+/* Untuk layar tablet / mobile */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 67.5%;
+    }
+    /* Sidebar tetap hidden default */
+    .sidebar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: var(--sidebar-width);
+        height: calc(100% - 60px);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        background: var(--bg-sidebar);
+    }
+    .chat-item, .nav-title {
+        font-size: 2rem;
+    }
+
+    /* Saat terbuka -> overlay */
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Main konten tidak bergeser */
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    /* Hamburger tetap toggle ikon */
+    .hamburger.active+.overlay {
+        display: block;
+    }
+
+    /* Overlay background jika diinginkan */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 900;
+    }
+
+    /* home information  */
+
+    /* home information end */
+}
+
+
+@media screen and (max-width: 495px) {
+    html {
+        font-size: 63.5%;
+    }
+    .index:nth-child(n+3) {
+        margin-top: 4rem;
+    }
+}

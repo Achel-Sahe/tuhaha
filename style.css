@@ -11,16 +11,16 @@
     --scnd: #ECDCBF;
     --third: #A31D1D;
     --fourth: #781c1c; */
-
-body {
-    margin: 0;
-    height: 200rem;
+    
+    body {
+        margin: 0;
+        height: 400rem;
     font-family: 'Inter';
     background-color: #ffffff;
 }
 h1 {
     font-size: 2.6rem;
-
+    
 }
 h2 {
     font-size: 2.5rem;
@@ -33,6 +33,13 @@ h4{
 }
 p {
     font-size: 1.2rem;
+}
+.header{
+    padding-left: 3rem;
+    margin-top: 1rem;
+}
+.sub-judul {
+    font-size: 1.6rem;
 }
 
 .judul{
@@ -302,12 +309,7 @@ a {
     color: #951010;
 }
 
-.home-argument, .sambutan, .header-map {
-    padding-left: 3rem;
-    margin-top: 1rem;
-}
 .home-argument p {
-    font-size: 1.6rem;
     margin-top: -1rem;
     width: 90%;
 }
@@ -351,7 +353,6 @@ a {
 
 /* sambutan end */
 .map-wrapper p{
-    font-size: 1.6rem;
     margin-bottom: 3rem;
     box-sizing: border-box;
 }
@@ -371,11 +372,60 @@ a {
     display: flex;
     justify-content: center;
 }
+/* map end  */
 
+/* sotk  */
+.sotk-wrapper {
+    margin-top: 5rem;
+}
+.cards-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+    scrollbar-color: #f2f2f2 #ffffff;
+    margin-left: 3rem;
+}
 
+.cards-container .card {
+  flex: 0 0 auto;
+  width: 350px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 
+.card-content {
+  flex-grow: 1;
+  padding: 16px;
+  background-color: #6CC0A5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.name {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0 0 8px;
+}
+.role {
+  font-size: 0.95rem;
+  color: white;
+  margin: 0;
+}
+/* sotk end */
 /* Untuk layar laptop*/
 @media (max-width: 1366px) {
     html {
@@ -407,6 +457,10 @@ a {
 @media screen and (max-width: 768px) {
     html {
         font-size: 67.5%;
+    }
+    .header {
+        text-align: center;
+        padding: 0 2rem;
     }
     /* Sidebar tetap hidden default */
     .sidebar {

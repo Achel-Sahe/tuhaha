@@ -377,7 +377,9 @@ a {
 
 /* sotk  */
 .sotk-wrapper {
-    margin-top: 5rem;
+    margin-top: -5rem;
+    padding: 2rem 0;
+    background-color: #f7f7f7;
 }
 .cards-container {
   display: flex;
@@ -386,7 +388,7 @@ a {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
-    scrollbar-color: #f2f2f2 #ffffff;
+    scrollbar-color: #e1e1e1 #f7f7f7;
     margin-left: 1.8rem;
     width: 97%;
 }
@@ -552,7 +554,14 @@ a {
     }
 
     /* home information  */
-
+    .home-argument .sub-judul {
+        margin: 0 auto 2rem;
+    }
+    .sambutan .sambutan-isi .isi {
+        height: 17rem;
+        width: 97%;
+        margin: auto;
+    }
     /* home information end */
 }
 

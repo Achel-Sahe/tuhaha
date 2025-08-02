@@ -363,6 +363,7 @@ a {
 .map-wrapper {
     background: linear-gradient(to bottom, #f7f7f7, #ffffff);
     margin-top: -2.5rem;
+    padding-top: 7rem;
 }
 
 .map iframe{
@@ -377,8 +378,7 @@ a {
 
 /* sotk  */
 .sotk-wrapper {
-    margin-top: -5rem;
-    padding: 2rem 0;
+    margin-top: -2.1rem;
     background-color: #f7f7f7;
 }
 .cards-container {

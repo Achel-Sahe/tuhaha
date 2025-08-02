@@ -38,6 +38,7 @@ p {
 .header{
     padding-left: 3rem;
     margin-top: 1rem;
+    width: 90%;
 }
 .sub-judul {
     font-size: 1.6rem;
@@ -307,12 +308,11 @@ a {
 }
 .button-info i {
     font-size: 4rem;
-    color: #951010;
+    color: #d41f1f;
 }
 
 .home-argument p {
     margin-top: -1rem;
-    width: 90%;
 }
 /* home information section end */
 
@@ -346,6 +346,8 @@ a {
 }
 .sambutan-isi h1 {
     color: #cc2020;
+    margin-bottom: 3.2rem;
+    line-height: 4rem;
 }
 .si:nth-child(n+1){
     margin-top: -1.5rem;
@@ -399,7 +401,7 @@ a {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: #f7f7f7;
   text-align: center;
 }
 
@@ -469,10 +471,60 @@ a {
     margin-right: 2rem;
 }
 /* sotk end */
+
+/* administrasi  */
+.administrasi-penduduk {
+    width: 100%;
+    background-color: #f7f7f7;
+    margin-top: -2rem;
+}
+.adm-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 5rem;
+}
+.adm-card {
+    width: 19rem;
+    height: auto;
+    background-color: #ffffff;
+    margin-bottom: 5rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 1px solid rgb(225, 221, 221);
+    box-shadow: 0 5px 10px .6px rgb(209, 209, 209);
+}
+.adm-card i {
+    font-size: 4.2rem;
+    position: relative;
+    top: -2rem;
+    color: #d41f1f;
+}
+.adm-card h4, .adm-card p{
+    margin-top: -1.9rem;
+}
+.adm-card h4 {
+    font-size: 2.3rem;
+}
+.administrasi-penduduk .btn-struktur{
+    margin-left: auto;
+    margin-top: -2rem;
+    padding-right: 1rem;
+}
+
+/* administrasi end */
+
 /* Untuk layar laptop*/
 @media (max-width: 1366px) {
     html {
         font-size: 78%;
+    }
+    h1 {
+        font-size: 2.3rem;
     }
     .button-wrapper{
             flex-wrap: wrap;

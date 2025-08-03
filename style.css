@@ -15,7 +15,6 @@
     
     body {
         margin: 0;
-        height: 400rem;
     font-family: 'Inter';
     background-color: #ffffff;
 }
@@ -515,8 +514,50 @@ a {
     margin-top: -2rem;
     padding-right: 1rem;
 }
-
 /* administrasi end */
+
+/* footer section */
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--bg-btn);
+    color: white;
+    padding: 2rem 0 6rem;
+    margin-top: auto;
+}
+footer .logo img {
+    width: 6rem;
+}
+footer .logo{
+    display: flex;
+    align-items: center;
+}
+footer .footer-sect p{
+    font-size: 1rem;
+}
+footer .judul-footer {
+    font-size: 1.4rem;
+}
+.foot-icon {
+    display: flex;
+}
+.foot-icon i {
+    font-size: 1.2rem;
+}
+.foot-icon p{
+    margin-top: -.1rem;
+    margin-left: .5rem;
+}
+footer .footer-1{
+    width: 25rem;
+}
+.footer-3 a,.footer-4 a{
+    color: white;
+    text-decoration: underline;
+}
+/* footer section end */
 
 /* Untuk layar laptop*/
 @media (max-width: 1366px) {
@@ -615,6 +656,12 @@ a {
         margin: auto;
     }
     /* home information end */
+    /* footer  */
+    footer {
+        flex-direction: column;
+        padding-right: 2rem 3rem 6rem;
+    }
+    /* footer end */
 }
 
 

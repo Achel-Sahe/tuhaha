@@ -1,11 +1,39 @@
-      let currentSlide = 0;
-  const slides = document.querySelectorAll(".carousel-slide");
+  // Carousel dengan auto-slide
+  const slides = document.querySelectorAll('.slide');
+  const container = document.querySelector('.slides-container');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let current = 0;
+  let timer;
+  const delay = 5000;
 
-  setInterval(() => {
-      slides[currentSlide].classList.remove("active");
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add("active");
-  }, 5000);
+  function updateCarousel() {
+    container.style.transform = `translateX(-${current * 100}%)`;
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      current = (current + 1) % slides.length;
+      updateCarousel();
+    }, delay);
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = (current > 0 ? current - 1 : slides.length - 1);
+    updateCarousel();
+    resetTimer();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current < slides.length - 1 ? current + 1 : 0);
+    updateCarousel();
+    resetTimer();
+  });
+
+  // Awal auto-slide
+  resetTimer();
+
       const toggle = document.getElementById('nav-toggle');
 const sidebar = document.getElementById('sidebar');
 const main = document.getElementById('main');

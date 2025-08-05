@@ -217,40 +217,50 @@ a {
 
 
 /* bacground image  */
-.hero-carousel {
+.background-carousel {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 62rem;
     overflow: hidden;
+    margin-top: -13rem;
 }
 
-.carousel-container {
+.slides-container {
     display: flex;
+    transition: transform 0.5s ease;
     height: 100%;
-    width: 100%;
-    transition: transform 1s ease-in-out;
 }
 
+.slide {
+    min-width: 100%;
+    object-fit: cover;
+}
 
-.carousel-slide {
-    width: 100%;
-    flex-shrink: 0;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
+.carousel-btn {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    display: none;
+    transform: translateY(-50%);
+    background: rgba(33, 33, 33, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.carousel-slide.active {
-    opacity: 1;
+.carousel-btn.prev {
+    left: 1rem;
+}
+
+.carousel-btn.next {
+    right: 1rem;
 }
 
 .carousel-overlay {
     position: absolute;
+    margin-top: 5rem;
     width: 80%;
     top: 50%;
     left: 50%;
@@ -520,12 +530,14 @@ a {
 footer {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-evenly;
     background-color: var(--bg-btn);
     color: white;
     padding: 2rem 0 6rem;
     margin-top: auto;
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-evenly;
 }
 footer .logo img {
     width: 6rem;
@@ -657,9 +669,24 @@ footer .footer-1{
     }
     /* home information end */
     /* footer  */
-    footer {
+    .footer-wrapper {
+        padding: 0 2rem 0;
         flex-direction: column;
-        padding-right: 2rem 3rem 6rem;
+    }
+    .logo img{
+        margin: 0 auto 1rem;
+    }
+    footer .footer-1 {
+        width: auto;
+    }
+    .footer-1,.footer-2, .footer-3,.footer-4{
+        border-bottom: 1px solid #eee;
+    }
+    footer .footer-sect p{
+    font-size: 1.4rem;
+    }
+    footer .judul-footer {
+    font-size: 1.9rem;
     }
     /* footer end */
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // safe-init.js  — paste ini satu kali (hapus/disable skrip lama)
 (function(){
   // kecil helper untuk debug & safe attach
@@ -24,7 +24,7 @@
       };
     }
   })();
-=======
+
   // Carousel dengan auto-slide
   const slides = document.querySelectorAll('.slide');
   const container = document.querySelector('.slides-container');
@@ -69,7 +69,6 @@ toggle.addEventListener('click', () => {
   main.classList.toggle('shifted');
   toggle.classList.toggle('active');
 });
->>>>>>> 4830141a0eedff57ccdec3a37602db31fce17bb0
 
   window.addEventListener('error', e => console.error('[GLOBAL ERROR]', e.message, 'at', e.filename + ':' + e.lineno));
   window.addEventListener('unhandledrejection', e => console.error('[UNHANDLED REJECTION]', e.reason));

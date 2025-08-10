@@ -822,17 +822,14 @@ footer .footer-1{
         border-bottom: 1px solid #eee;
     }
     footer .footer-sect p{
-<<<<<<< HEAD
         font-size: 1.4rem;
     }
     footer .judul-footer {
         font-size: 1.9rem;
-=======
     font-size: 1.4rem;
     }
     footer .judul-footer {
     font-size: 1.9rem;
->>>>>>> 4830141a0eedff57ccdec3a37602db31fce17bb0
     }
     /* footer end */
 }

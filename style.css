@@ -181,7 +181,7 @@ a {
 .chat-item {  
   position: relative;
   padding: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   border-radius: 4px;
   cursor: pointer;
   color: var(--text-color, #ececf1);
@@ -214,43 +214,107 @@ a {
   -o-transform: scaleX(.5);
 }
 
+.chat-list { padding: 0 16px; list-style: none; margin: 0; }
+.chat-item { margin-bottom: 10px; }
+.chat-item a, .dropdown-toggle {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+  color: var(--text-color, #eee);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Dropdown collapse/expand dengan transition (lebih smooth) */
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease;
+  padding-left: 12px;
+}
+.chat-item.active > .dropdown {
+  /* cukup tinggi agar menampung isi; bisa ganti 400px sesuai isi */
+  max-height: 400px;
+}
+
+/* Hover underline kecil (tetap) */
+.chat-item li::after, .chat-item .dropdown a::after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50%;
+  background: #cc2020;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .25s ease;
+}
+.chat-item li::after, .chat-item .dropdown a::after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50%;
+  background: #cc2020;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .25s ease;
+}
+.chat-item a:hover::after, .dropdown-toggle:hover::after { transform: scaleX(1); }
+
+
+
+/* Responsif: sembunyikan hover, gunakan klik di layar kecil */
+
+
 
 
 /* bacground image  */
-.hero-carousel {
+.background-carousel {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 62rem;
     overflow: hidden;
+    margin-top: -13rem;
 }
 
-.carousel-container {
+.slides-container {
     display: flex;
+    transition: transform 0.5s ease;
     height: 100%;
-    width: 100%;
-    transition: transform 1s ease-in-out;
 }
 
+.slide {
+    min-width: 100%;
+    object-fit: cover;
+}
 
-.carousel-slide {
-    width: 100%;
-    flex-shrink: 0;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
+.carousel-btn {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    display: none;
+    transform: translateY(-50%);
+    background: rgba(33, 33, 33, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.carousel-slide.active {
-    opacity: 1;
+.carousel-btn.prev {
+    left: 1rem;
+}
+
+.carousel-btn.next {
+    right: 1rem;
 }
 
 .carousel-overlay {
     position: absolute;
+    margin-top: 5rem;
     width: 80%;
     top: 50%;
     left: 50%;
@@ -379,7 +443,7 @@ a {
 /* sotk  */
 .sotk-wrapper {
     margin-top: -2.1rem;
-    background: linear-gradient(to bottom, #f7f7f7, #fff);
+    background: linear-gradient(to bottom, #f7f7f7, #f7f7f7, #fff);
     margin-bottom: 6rem;
 }
 .cards-container {
@@ -516,16 +580,88 @@ a {
 }
 /* administrasi end */
 
+/* APB Negeri  */
+.apb-wrapper {
+    margin: 1rem 0 8rem;
+}
+
+.apb-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.apb-section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.apb-img img {
+    width: 37rem;
+    height: 37rem;
+}
+
+.deskripsi, .dua{
+    width: 40rem;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+    height: 7rem;
+    box-shadow: 0 2px 4px 1px #c3c3c3;
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+.deskripsi::before {
+    content: 'Pendapatan Negeri';
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 1rem;
+}
+.deskripsi::after {
+    font-weight: bold;
+    content: 'Rp.000.000.00';
+    position: relative;
+    top: 3rem;
+    left: 7rem;
+    font-size: 2.9rem;
+    color: #4c4c4c;
+}
+.dua::before {
+    content: 'Pengeluaran Negeri';
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 1rem;
+}
+.dua::after {
+    font-weight: bold;
+    content: 'Rp.000.000.00';
+    position: relative;
+    top: 3rem;
+    left: 7rem;
+    font-size: 2.9rem;
+}
+/* APB Negeri end */
+
 /* footer section */
 footer {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-evenly;
     background-color: var(--bg-btn);
     color: white;
     padding: 2rem 0 6rem;
     margin-top: auto;
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-evenly;
 }
 footer .logo img {
     width: 6rem;
@@ -598,6 +734,10 @@ footer .footer-1{
         text-align: center;
         padding: 0 2rem;
     }
+
+    .chat-item{
+         font-size: 1.4rem;
+    }
     /* Sidebar tetap hidden default */
     .sidebar {
         position: fixed;
@@ -613,22 +753,33 @@ footer .footer-1{
     .chat-item, .nav-title {
         font-size: 2rem;
     }
-
+    
+    .chat-item.has-dropdown:hover .dropdown {
+    display: none;
+    }
+    .chat-item .dropdown a::after{
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+}
+    
     /* Saat terbuka -> overlay */
     .sidebar.open {
         transform: translateX(0);
     }
-
+    
     /* Main konten tidak bergeser */
     .main-content {
         margin-left: 0 !important;
     }
-
+    
     /* Hamburger tetap toggle ikon */
     .hamburger.active+.overlay {
         display: block;
     }
-
+    
     /* Overlay background jika diinginkan */
     .overlay {
         display: none;
@@ -640,12 +791,12 @@ footer .footer-1{
         background: rgba(0, 0, 0, 0.3);
         z-index: 900;
     }
-
+    
     .cards-container{
         width: 94%;
         margin-left: 1rem;
     }
-
+    
     /* home information  */
     .home-argument .sub-judul {
         margin: 0 auto 2rem;
@@ -657,9 +808,24 @@ footer .footer-1{
     }
     /* home information end */
     /* footer  */
-    footer {
+    .footer-wrapper {
+        padding: 0 2rem 0;
         flex-direction: column;
-        padding-right: 2rem 3rem 6rem;
+    }
+    .logo img{
+        margin: 0 auto 1rem;
+    }
+    footer .footer-1 {
+        width: auto;
+    }
+    .footer-1,.footer-2, .footer-3,.footer-4{
+        border-bottom: 1px solid #eee;
+    }
+    footer .footer-sect p{
+        font-size: 1.4rem;
+    }
+    footer .judul-footer {
+        font-size: 1.9rem;
     }
     /* footer end */
 }
@@ -671,5 +837,8 @@ footer .footer-1{
     }
     .index:nth-child(n+3) {
         margin-top: 4rem;
+    }
+    .chat-item a, .chat-item button{
+         font-size: 1.6rem;
     }
 }

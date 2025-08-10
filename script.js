@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // safe-init.js  — paste ini satu kali (hapus/disable skrip lama)
 (function(){
   // kecil helper untuk debug & safe attach
@@ -23,6 +24,52 @@
       };
     }
   })();
+=======
+  // Carousel dengan auto-slide
+  const slides = document.querySelectorAll('.slide');
+  const container = document.querySelector('.slides-container');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let current = 0;
+  let timer;
+  const delay = 5000;
+
+  function updateCarousel() {
+    container.style.transform = `translateX(-${current * 100}%)`;
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      current = (current + 1) % slides.length;
+      updateCarousel();
+    }, delay);
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = (current > 0 ? current - 1 : slides.length - 1);
+    updateCarousel();
+    resetTimer();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current < slides.length - 1 ? current + 1 : 0);
+    updateCarousel();
+    resetTimer();
+  });
+
+  // Awal auto-slide
+  resetTimer();
+
+      const toggle = document.getElementById('nav-toggle');
+const sidebar = document.getElementById('sidebar');
+const main = document.getElementById('main');
+toggle.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  main.classList.toggle('shifted');
+  toggle.classList.toggle('active');
+});
+>>>>>>> 4830141a0eedff57ccdec3a37602db31fce17bb0
 
   window.addEventListener('error', e => console.error('[GLOBAL ERROR]', e.message, 'at', e.filename + ':' + e.lineno));
   window.addEventListener('unhandledrejection', e => console.error('[UNHANDLED REJECTION]', e.reason));

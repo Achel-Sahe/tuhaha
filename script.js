@@ -1,29 +1,4 @@
 
-// safe-init.js  — paste ini satu kali (hapus/disable skrip lama)
-(function(){
-  // kecil helper untuk debug & safe attach
-  const safe = {
-    el: (sel) => document.querySelector(sel),
-    els: (sel) => Array.from(document.querySelectorAll(sel)),
-    hasEl: (sel) => !!document.querySelector(sel),
-    log: (...args) => console.log('[SAFE]', ...args),
-    warn: (...args) => console.warn('[SAFE]', ...args)
-  };
-
-  // polyfill closest/matches jika perlu (opsional, keep for older browsers)
-  (function() {
-    if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-    if (!Element.prototype.closest) {
-      Element.prototype.closest = function(s){
-        var el = this;
-        do {
-          if (el.matches && el.matches(s)) return el;
-          el = el.parentElement || el.parentNode;
-        } while (el !== null && el.nodeType === 1);
-        return null;
-      };
-    }
-  })();
 
   // Carousel dengan auto-slide
   const slides = document.querySelectorAll('.slide');
@@ -209,4 +184,3 @@ toggle.addEventListener('click', () => {
 
     safe.log('initialization complete');
   }); // DOMContentLoaded end
-})();

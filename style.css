@@ -139,6 +139,10 @@ p {
 
 .sidebar.open {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
 
 .close-btn {
@@ -172,9 +176,16 @@ main.shifted {
     overflow-y: auto;
 }
 
-a {
+ a {
     text-decoration: none;
     font-family: 'Poppins';
+
+}
+.chat-item a {
+      display: block;
+  padding: 12px;
+  color: var(--text-color, #ececf1);
+  font-size: 1.2rem;
 }
 
 
@@ -185,10 +196,10 @@ a {
   border-radius: 4px;
   cursor: pointer;
   color: var(--text-color, #ececf1);
-  font-size: 1.2rem;
+  font-size: 10px;
 }
 
-.chat-item::after {
+.chat-item::after{
   content: '';
   position: absolute;
   bottom: 0;
@@ -214,7 +225,24 @@ a {
   -o-transform: scaleX(.5);
 }
 
+.has-dropdown .dropdown {
+  display: none;
+  position: relative;
+  list-style: none;
+  padding-left: 16px;
+}
+.has-dropdown.open .dropdown {
+  display: block;
+}
 
+.dropdown li a {
+  padding: 12px 12px;
+  font-size: 1.1rem;
+}
+
+.dropdown li a{
+    border-bottom: 1px solid darkred;
+}
 
 /* bacground image  */
 .background-carousel {
@@ -498,7 +526,7 @@ a {
     width: 19rem;
     height: auto;
     background-color: #ffffff;
-    margin-bottom: 5rem;
+    margin: 0 1rem 5rem ;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -724,6 +752,10 @@ footer .footer-1{
     h1 {
         font-size: 2.3rem;
     }
+    .sidebar .chat-item a{
+        font-size: 20px;
+        padding-bottom: 2rem;
+    }
     .button-wrapper{
             flex-wrap: wrap;
     }
@@ -751,6 +783,9 @@ footer .footer-1{
     html {
         font-size: 67.5%;
     }
+      .dropdown {
+    position: static;
+  }
     .header {
         text-align: center;
         padding: 0 2rem;
@@ -767,25 +802,30 @@ footer .footer-1{
         z-index: 1000;
         background: var(--bg-sidebar);
     }
-    .chat-item, .nav-title {
+    
+    .nav-title {
         font-size: 2rem;
     }
-
+    
     /* Saat terbuka -> overlay */
     .sidebar.open {
         transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
     }
-
+    
     /* Main konten tidak bergeser */
     .main-content {
         margin-left: 0 !important;
     }
-
+    
     /* Hamburger tetap toggle ikon */
     .hamburger.active+.overlay {
         display: block;
     }
-
+    
     /* Overlay background jika diinginkan */
     .overlay {
         display: none;
@@ -797,12 +837,12 @@ footer .footer-1{
         background: rgba(0, 0, 0, 0.3);
         z-index: 900;
     }
-
+    
     .cards-container{
         width: 94%;
         margin-left: 1rem;
     }
-
+    
     /* home information  */
     .home-argument .sub-judul {
         margin: 0 auto 2rem;
@@ -813,10 +853,12 @@ footer .footer-1{
         margin: auto;
     }
     /* home information end */
-
+    
     /* apb negeri */
     .card-apb {
         display: block;
+        width: 90%;
+        padding: 1rem;
     }
     .apb-rinci .header p {
         font-size: 1.4rem;
@@ -844,10 +886,10 @@ footer .footer-1{
         border-bottom: 1px solid #eee;
     }
     footer .footer-sect p{
-    font-size: 1.4rem;
+        font-size: 1.4rem;
     }
     footer .judul-footer {
-    font-size: 1.9rem;
+        font-size: 1.9rem;
     }
     /* footer end */
 }

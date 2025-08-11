@@ -77,44 +77,6 @@ toggle.addEventListener('click', () => {
       safe.log('#close-btn attached');
     } else safe.warn('#close-btn not attached', !!closeBtn);
 
-    /* ---------- Dropdown (delegation) ---------- */
-    const list = safe.el('.chat-list');
-    if (list) {
-      list.addEventListener('click', (ev) => {
-        // ignore clicks inside submenu items
-        if (ev.target.closest('.dropdown')) return;
-
-        // prefer .dropdown-toggle element, otherwise fallback ke .has-dropdown parent
-        const trigger = ev.target.closest('.dropdown-toggle');
-        const parentLi = trigger ? trigger.parentElement : ev.target.closest('.has-dropdown');
-
-        if (!parentLi || !parentLi.classList.contains('has-dropdown')) return;
-
-        ev.preventDefault();
-        const willOpen = !parentLi.classList.contains('active');
-
-        // close others
-        list.querySelectorAll('.has-dropdown.active').forEach(li => {
-          li.classList.remove('active');
-          const btn = li.querySelector('.dropdown-toggle');
-          if (btn) btn.setAttribute('aria-expanded','false');
-          const sub = li.querySelector('.dropdown');
-          if (sub) sub.setAttribute('aria-hidden','true');
-        });
-
-        if (willOpen) {
-          parentLi.classList.add('active');
-          const btn = parentLi.querySelector('.dropdown-toggle');
-          if (btn) btn.setAttribute('aria-expanded','true');
-          const sub = parentLi.querySelector('.dropdown');
-          if (sub) sub.setAttribute('aria-hidden','false');
-        }
-
-        safe.log('toggled dropdown for', parentLi.querySelector('.dropdown-toggle') ? parentLi.querySelector('.dropdown-toggle').textContent.trim() : parentLi.textContent.trim());
-      });
-
-      safe.log('.chat-list delegation attached');
-    } else safe.warn('.chat-list not found — dropdown disabled');
 
     /* ---------- Carousel (safe init) ---------- */
     const container = safe.el('.slides-container');
@@ -184,3 +146,11 @@ toggle.addEventListener('click', () => {
 
     safe.log('initialization complete');
   }); // DOMContentLoaded end
+
+    document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      parent.classList.toggle('open');
+    });
+  });

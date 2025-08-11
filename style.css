@@ -698,6 +698,67 @@ main.shifted {
 }
 /* APB Negeri end */
 
+/* berita negeri  */
+.berita-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-berita {
+  width: 370px;
+  height: 420px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 16px;
+}
+
+.card-berita img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-berita {
+  padding: 16px;
+}
+
+.card-berita-title { 
+  font-size: 1.25rem;
+  margin: 5px 0 8px;
+  color: #e31a1a;
+}
+
+.card-berita-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+.card-berita-meta i:nth-child(2) {
+    margin-left: 15px;
+}
+
+.card-berita-text {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 12px;
+}
+
+.card-berita-link {
+    text-decoration: underline;
+  color: #c61515;
+  font-size: .9rem;
+}
+
+.card-berita-link:hover {
+  text-decoration: underline;
+}
+
+/* berita negeri end  */
+
 
 /* footer section */
 footer {
@@ -870,7 +931,29 @@ footer .footer-1{
         display: none;
     }
     /* apb negeri end  */
-    
+
+    /* berita negeri  */
+    .card-berita-text {
+        display: none;
+    }
+    .card-berita{
+        width: 90%;
+        height:auto;
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .card-berita-link{
+        font-size: 1.5rem;
+
+    }
+    .card-berita-title {
+        font-size: 1.5rem;
+    }
+    .card-berita-meta{
+        font-size: 1.3rem;
+        margin: 15px 0 0;
+    }
+    /* berita negeri end */
+
     /* footer  */
     .footer-wrapper {
         padding: 0 2rem 0;

@@ -904,6 +904,7 @@ a .side:hover img{
   color: black;
 
 }
+
 .side-berita-isi a:hover .sbi{
   background-color: #f5f5f5;
 }
@@ -917,6 +918,7 @@ a .side:hover img{
   align-items: center;
   color: #e70000;
 }
+
 .side-judul i {
   margin: .3rem 1rem 0 2rem;
   font-size: 1.6rem;
@@ -929,6 +931,7 @@ a .side:hover img{
   width: 25rem;
   align-items: center;
 }
+
 .sbi-date {
   width: 90%;
   border-bottom: 1px solid rgb(175, 175, 175);
@@ -937,7 +940,6 @@ a .side:hover img{
   margin: auto;
   margin-bottom: 1rem;
 }
-
 
 .sbi-text p {
   font-size: 1rem;
@@ -963,7 +965,6 @@ a .side:hover img{
   font-size: 1rem  ;
   
 }
-
 
 
 /* Profil negeri section end */

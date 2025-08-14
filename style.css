@@ -191,6 +191,32 @@ a {
   font-size: 10px;
 }
 
+.main-sb::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.7rem;
+  height: 2px;
+  width: 100%;
+  background-color: #cc2020;
+  transform: scaleX(.7);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  -webkit-transform: scaleX(.7);
+  -moz-transform: scaleX(.7);
+  -ms-transform: scaleX(.7);
+  -o-transform: scaleX(.7);
+}
+
+.drop-sb {
+  background-color: #462424;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
 .chat-item::after {
   content: "";
   position: absolute;
@@ -514,7 +540,7 @@ a {
   margin-top: 5rem;
 }
 .adm-card {
-  width: 19rem;
+  width: 17rem;
   height: auto;
   background-color: #ffffff;
   margin: 0 1rem 5rem;
@@ -698,6 +724,11 @@ a {
   flex-wrap: wrap;
 }
 
+.berita-wrapper .btn-struktur {
+  margin-left: auto;
+  padding-right: 5rem;
+}
+
 .card-berita {
   width: 370px;
   height: 420px;
@@ -774,6 +805,173 @@ a {
 }
 
 /* galeri negeri end  */
+
+
+
+
+
+
+/* Profil negeri section  */
+.body2 {
+  background-color: #f1f1f1;
+}
+
+.carousel-2 {
+  display: none;
+}
+
+.element-wrapper {
+  display: flex;
+  margin: 7rem 0;
+  justify-content: space-evenly;
+}
+
+.sejarah-wrapper {
+  width: 55rem;
+  background-color: white;
+  border-radius: .8rem;
+  padding: 1rem;
+  -webkit-border-radius: .8rem;
+  -moz-border-radius: .8rem;
+  -ms-border-radius: .8rem;
+  -o-border-radius: .8rem;
+}
+.sejarah-wrapper .sejarah-img img{
+  width: 55rem;
+
+}
+.side-section{
+  border-radius: .8rem;
+  width: 30rem;
+  background-color: #fff;
+  -webkit-border-radius: .8rem;
+  -moz-border-radius: .8rem;
+  -ms-border-radius: .8rem;
+  -o-border-radius: .8rem;
+}
+
+.side-section .side-icon{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.side {
+  padding: .1rem;
+}
+
+.side-icon .side img {
+  width: 3rem;
+  position: relative;
+  top: -18px;
+  margin-bottom: -2rem;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+a .side:hover img{
+  width: 3.5rem;
+  top: -21px;
+}
+
+.side {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 3px 5px .1px #e1e1e1;
+  width: 7rem;
+  color: black;
+  padding: -1rem 0;
+  line-height: -5rem;
+  margin: 0 1rem 2rem;
+}
+
+.side-berita {
+  margin-bottom: 5rem;
+}
+
+.sbi-img img {
+  width: 6rem;
+}
+
+.side-berita-isi a{
+  margin:0 auto;
+  text-decoration: none;
+  color: black;
+
+}
+.side-berita-isi a:hover .sbi{
+  background-color: #f5f5f5;
+}
+
+.sbi:last-child {
+  border-bottom: none;
+}
+
+.side-judul{
+  display:flex;
+  align-items: center;
+  color: #e70000;
+}
+.side-judul i {
+  margin: .3rem 1rem 0 2rem;
+  font-size: 1.6rem;
+}
+
+.sbi-isi {
+  display: flex;
+  margin: auto;
+  gap: 1rem;
+  width: 25rem;
+  align-items: center;
+}
+.sbi-date {
+  width: 90%;
+  border-bottom: 1px solid rgb(175, 175, 175);
+  text-align: right;
+  padding-right: 1rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+
+.sbi-text p {
+  font-size: 1rem;
+}
+
+.header-profil .judul-profil {
+  border-bottom: 1px solid #e30000;
+  margin: .5rem 0 0;
+  padding-bottom: .5rem;
+  color: #e60000;
+}
+.date-profil {
+  display: flex;
+  gap: 4rem;
+}
+.date-profil .dp {
+  display: flex;
+  align-items: center ;
+  gap: .5rem;
+  font-size: .9rem  ;
+}
+.dp p {
+  font-size: 1rem  ;
+  
+}
+
+
+
+/* Profil negeri section end */
+
+
+
+
+
 
 /* footer section */
 footer {
@@ -981,6 +1179,14 @@ footer .footer-1 {
     gap: 8px;
   }
   /* galeri negeri end */
+
+  /* berita  */
+  .berita-wrapper .btn-struktur {
+  margin-left: auto;
+  padding-right: 2rem;
+}
+
+  /* berita end */
 
   /* footer  */
   .footer-wrapper {

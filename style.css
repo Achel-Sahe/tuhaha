@@ -19,6 +19,7 @@ body {
   font-weight: 350;
   font-style: normal;
   background-color: #ffffff;
+  width: 100%;
 }
 h1 {
   font-size: 2.3rem;
@@ -354,6 +355,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
 .button-info p {
   font-weight: 600;
@@ -368,6 +370,9 @@ a {
 
 .home-argument p {
   margin-top: -1rem;
+}
+.home-argument {
+  margin-top: -3.8rem;
 }
 /* home information section end */
 
@@ -822,12 +827,13 @@ a {
 
 .element-wrapper {
   display: flex;
-  margin: 7rem 0;
+  margin: 7rem 1rem;
   justify-content: space-evenly;
+  gap:3rem;
 }
 
 .sejarah-wrapper {
-  width: 55rem;
+    flex: 2.7;
   background-color: white;
   border-radius: .8rem;
   padding: 1rem;
@@ -836,13 +842,21 @@ a {
   -ms-border-radius: .8rem;
   -o-border-radius: .8rem;
 }
-.sejarah-wrapper .sejarah-img img{
-  width: 55rem;
+.sejarah-wrapper .sejarah-img {
+  width: 100%;
+}
+.sejarah-wrapper .sejarah-img {
+  width: 100%;
+}
 
+.sejarah-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .side-section{
   border-radius: .8rem;
-  width: 30rem;
+  flex: 2;
   background-color: #fff;
   -webkit-border-radius: .8rem;
   -moz-border-radius: .8rem;
@@ -1035,9 +1049,6 @@ footer .footer-1 {
   .button-wrapper {
     flex-wrap: wrap;
   }
-  .index:nth-child(4) {
-    margin-top: 4rem;
-  }
   .sambutan {
     flex-wrap: wrap;
   }
@@ -1053,6 +1064,9 @@ footer .footer-1 {
   .sambutan {
     padding: 0.6rem;
   }
+  .side-section, .sejarah-wrapper{
+    width: 57rem;
+    margin: 0 auto; 
 }
 /* Untuk layar tablet / mobile */
 @media screen and (max-width: 768px) {
@@ -1131,9 +1145,6 @@ footer .footer-1 {
     width: 97%;
     margin: auto;
   }
-  /* .btn-struktur {
-            justify-content: center;
-        } */
   /* home information end */
 
   /* apb negeri */
@@ -1186,9 +1197,20 @@ footer .footer-1 {
   margin-left: auto;
   padding-right: 2rem;
 }
-
   /* berita end */
 
+  /* sidebar  */
+  .element-wrapper {
+    flex-direction: column;
+  }
+  .side-section{
+    width: 97%;
+  }
+   .sejarah-wrapper  {
+    width: 95%;
+    margin-bottom: -2.4rem;
+   }
+  /* sidebar  */
   /* footer  */
   .footer-wrapper {
     padding: 0 2rem 0;
@@ -1219,11 +1241,11 @@ footer .footer-1 {
   html {
     font-size: 72.5%;
   }
-  .index:nth-child(n + 3) {
-    margin-top: 4rem;
-  }
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 8px;
   }
+      /* .sejarah-wrapper .sejarah-img img {
+    width: 22rem;
+  } */
 }

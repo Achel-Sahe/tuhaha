@@ -324,7 +324,7 @@ a {
 }
 
 .carousel-overlay img{
-  width: 7rem;
+  width: 9rem;
   height: auto;
   filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
   -webkit-filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
@@ -539,7 +539,7 @@ a {
 /* administrasi  */
 .administrasi-penduduk {
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: #f5f5f5;
   margin-top: -2rem;
 }
 .adm-wrapper {
@@ -985,10 +985,56 @@ a .side:hover img{
   
 }
 
-
 /* Profil negeri section end */
 
 
+/* struktur pemerintahan negeri tuhaha */
+/* SOTK  */
+.Struktur-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem 5rem;
+}
+.struktur-header{
+  margin: 5rem 0 1rem 2rem  ;
+}
+.kartu-struktur {
+  width: 17rem;
+  height: auto;
+  background-color: #781c1c;
+  color: white;
+  text-align: center;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+
+.kartu-struktur .kartu-img {
+  width: 100%;
+}
+.kartu-struktur img {
+  border-radius:.5rem .5rem 0 0 ;
+  width: 100%;
+  -webkit-border-radius:.5rem .5rem 0 0 ;
+  -moz-border-radius:.5rem .5rem 0 0 ;
+  -ms-border-radius:.5rem .5rem 0 0 ;
+  -o-border-radius:.5rem .5rem 0 0 ;
+}
+.kartu-struktur h2 {
+  font-size: 1.4rem;
+  margin-top: -.01rem;
+}
+.kartu-struktur p {
+  margin-top: -.7rem;
+  font-size: .9rem;
+  padding-bottom: 1rem;
+}
+
+/* SOTK end */
+/* struktur pemerintahan negeri tuhaha end  */
 
 
 
@@ -999,13 +1045,23 @@ footer {
   height: auto;
   background-color: var(--bg-btn);
   color: white;
-  padding: 2rem 0 6rem;
+  padding: 2rem 0 1rem;
   margin-top: auto;
+}
+#hak {
+  text-align: center;
+  margin: 3rem 0 0;
+
+}
+
+footer p {
+  margin-top: -.5rem;
 }
 .footer-wrapper {
   display: flex;
   justify-content: space-evenly;
 }
+
 footer .logo img {
   width: 8rem;
 }
@@ -1018,6 +1074,7 @@ footer .footer-sect p {
 }
 footer .judul-footer {
   font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 .foot-icon {
   display: flex;
@@ -1216,6 +1273,17 @@ footer .footer-1 {
     margin-bottom: -2.4rem;
    }
   /* sidebar  */
+
+   /* struktur pemerintahan  */
+   .struktur-header{
+  margin: 5rem 0 2rem;
+  text-align: center;
+}
+.Struktur-section {
+  margin-bottom: 3rem;
+    gap: 2rem;
+}
+   /* struktur pemerintahan  */
   /* footer  */
   .footer-wrapper {
     padding: 0 2rem 0;
@@ -1240,6 +1308,7 @@ footer .footer-1 {
     font-size: 1.9rem;
   }
   /* footer end */
+
 }
 
 @media screen and (max-width: 495px) {

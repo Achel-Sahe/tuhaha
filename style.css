@@ -59,7 +59,7 @@ p {
   background: #1f2025;
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 20px;
   z-index: 1100;
 }
 
@@ -323,6 +323,12 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.carousel-overlay img{
+  width: 7rem;
+  height: auto;
+  filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
+  -webkit-filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
+}
 .carousel-overlay h2 {
   font-size: 2rem;
   margin-bottom: -2rem;
@@ -338,24 +344,24 @@ a {
   display: flex;
   flex-direction: column;
   background-color: #f7f7f7;
+  padding-top: 4rem;
 }
 .button-wrapper {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .button-info {
   background-color: white;
   width: 16rem;
   height: 6rem;
-  padding-bottom: 1rem;
   border: 1px solid rgb(225, 221, 221);
   box-shadow: 0 5px 10px 0.6px rgb(209, 209, 209);
   display: flex;
   flex-direction: column;
+  padding-bottom: 2rem;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
 }
 .button-info p {
   font-weight: 600;
@@ -382,7 +388,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   background-color: #ffffff;
-  margin: 3rem 0;
+  margin: -8rem 0 0;
 }
 .sambutan .sambutan-foto img {
   width: 23rem;
@@ -422,7 +428,7 @@ a {
   width: 75%;
 }
 .map-wrapper {
-  margin-top: -2.5rem;
+  margin-top: -11.5rem;
   padding-top: 7rem;
 }
 
@@ -438,9 +444,8 @@ a {
 
 /* sotk  */
 .sotk-wrapper {
-  margin-top: -2.1rem;
-  background: linear-gradient(to bottom, #f7f7f7, #fff);
-  margin-bottom: 6rem;
+  margin-top: 3rem;
+  background-color: white;
 }
 .cards-container {
   display: flex;
@@ -1002,7 +1007,7 @@ footer {
   justify-content: space-evenly;
 }
 footer .logo img {
-  width: 6rem;
+  width: 8rem;
 }
 footer .logo {
   display: flex;
@@ -1239,7 +1244,7 @@ footer .footer-1 {
 
 @media screen and (max-width: 495px) {
   html {
-    font-size: 72.5%;
+    font-size: 63.5%;
   }
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -1248,4 +1253,5 @@ footer .footer-1 {
       /* .sejarah-wrapper .sejarah-img img {
     width: 22rem;
   } */
+}
 }

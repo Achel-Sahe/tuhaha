@@ -153,4 +153,5 @@ toggle.addEventListener('click', () => {
       const parent = this.parentElement;
       parent.classList.toggle('open');
     });
-  });
+    });
+  

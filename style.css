@@ -339,6 +339,70 @@ a {
 }
 /* bacground image end */
 
+/* text berjalan  */
+.marquee-wrapper {
+  display: flex;
+}
+.marquee-side {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  background-color: #c90101;
+  color: white;
+}
+.marquee-side i {
+  font-size: 1.2rem;
+  margin-right: .5rem;
+}
+.marquee-w {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  margin: auto;
+  overflow: hidden;
+}
+.marquee {
+  position: absolute;
+  display: block;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  text-align: center;
+  white-space: nowrap;
+  min-height: 100%;
+  height: 100%;
+  line-height:3rem;
+  font-size: 1.5rem;
+  animation: marquee 10s linear infinite ;
+  -webkit-animation: marquee 15s linear infinite ;
+}
+@keyframes marquee{
+  0%{
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+} 100% {
+  transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+}
+}
+/* text berjalan  */
+
 /* home information section */
 .home-info {
   display: flex;
@@ -359,9 +423,15 @@ a {
   box-shadow: 0 5px 10px 0.6px rgb(209, 209, 209);
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
   padding-bottom: 2rem;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 .button-info p {
   font-weight: 600;
@@ -998,6 +1068,7 @@ a .side:hover img{
 }
 .struktur-header{
   margin: 5rem 0 1rem 2rem  ;
+  color: #dc0606;
 }
 .kartu-struktur {
   width: 17rem;
@@ -1036,6 +1107,62 @@ a .side:hover img{
 /* SOTK end */
 /* struktur pemerintahan negeri tuhaha end  */
 
+/* Data Negeri Section */
+.body-data {
+  background-color: #f5f5f5;
+}
+.data-wrapper {
+  display: flex;
+  width: 80%;
+  margin: 9rem auto 10rem;
+  gap: 0 2rem;
+}
+/* populasi perwilayah  */
+  .population-table {
+    border-collapse: collapse;
+    width: 30rem;
+    border: 2px solid #d4d4d4;
+    margin-top: 1.5rem;
+    font-size: 1.1rem
+  }
+
+  .data-spek {
+    background-color: white;
+    padding: 2rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;  
+    box-shadow: 0 5px 9px .5px rgb(228, 228, 228);
+}
+  .population-table th, 
+  .population-table td {
+    border: 1px solid #cdcdcd;
+    padding: 8px 8px 8px 10px;
+    text-align: left;
+  }
+  
+  .population-table tr:last-child {
+    font-weight: bold;
+  } 
+
+  .chart {
+    width: 40rem;
+    padding: 2rem;
+    background-color: white;
+        border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    box-shadow: 0 5px 9px .5px rgb(228, 228, 228);
+  }
+  #myChart {
+    display: block;
+  }
+  /* populasi perwilayah end */
+/* Data Negeri Section */
 
 
 
@@ -1051,7 +1178,8 @@ footer {
 #hak {
   text-align: center;
   margin: 3rem 0 0;
-
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 footer p {
@@ -1130,6 +1258,24 @@ footer .footer-1 {
     width: 57rem;
     margin: 0 auto; 
 }
+
+@media screen and (max-width: 1000px){
+  .data-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+  margin: 9rem auto 5rem;
+  gap: 3rem 0;
+}
+    .population-table {
+    width:100%;
+  }
+  .chart {
+    width: 93%; 
+    margin-bottom: 5rem;
+  }
+}  
+  
 /* Untuk layar tablet / mobile */
 @media screen and (max-width: 768px) {
   html {
@@ -1208,6 +1354,10 @@ footer .footer-1 {
     margin: auto;
   }
   /* home information end */
+
+  .sambutan-foto {
+    margin-top: 2rem;
+  }
 
   /* apb negeri */
   .card-apb {
@@ -1319,8 +1469,8 @@ footer .footer-1 {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 8px;
   }
-      /* .sejarah-wrapper .sejarah-img img {
-    width: 22rem;
-  } */
+  .chart {
+    width: 89%; 
+  }
 }
 }

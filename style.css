@@ -1431,7 +1431,7 @@ footer .footer-1 {
 }
 .Struktur-section {
   margin-bottom: 3rem;
-    gap: 2rem;
+    gap: 1.5rem 1rem; 
 }
    /* struktur pemerintahan  */
   /* footer  */

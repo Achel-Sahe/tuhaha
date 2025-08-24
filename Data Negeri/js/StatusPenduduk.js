@@ -3,7 +3,7 @@
   new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['Tetap', 'Tidak Tetap'],
+      labels: ['Tetap', 'Tidak Tetap'], 
       datasets: [{  
         label: 'Jenis Kelamin',
         data: [80, 0],

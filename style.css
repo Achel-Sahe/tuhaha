@@ -1164,7 +1164,93 @@ a .side:hover img{
   /* populasi perwilayah end */
 /* Data Negeri Section */
 
+/* galeri section  */
+/* foto  */
+.galeri-wrapper .galeri-image img{
+  width: 25rem;
+  height: auto;
+}
+.fast-wrapper {
+  width: 80rem;
+  margin: 0 auto 5rem;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.fast-foot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+.fast-foot a {
+  color: rgb(83, 83, 83);
+}
+.ff-card {
+  border: 4px solid #f1f1f1;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+.ff-card img {
+  width: 4rem;
+  height: auto;
+}
 
+.ff-card h4 {
+  margin: .5rem 0;
+}
+.galeri-wrapper {
+  width: 80rem;
+  background-color: rgb(255, 255, 255);
+  margin: .5rem auto 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.galeri-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  margin: 1rem 0 3rem;
+}
+.judul-h1 {
+  position: relative;
+  display: inline-block;        /* Agar ukuran mengikuti lebar teks */
+  padding-bottom: 0.25em;        /* Jarak antara teks dan garis bottom */
+  color: #ff0d0d;
+  font-size: 2.5rem;
+}
+.judulH1-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.judul-h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16%;                   /* Menggeser border agar tetap di tengah */
+  width: 70%;                    /* Lebar border diubah jadi 75% */
+  border-bottom: 3px solid #d20808; /* Warna dan ketebalan garis */
+}
+
+
+/* foto end */
+/* galeri section end */
 
 /* footer section */
 footer {
@@ -1273,6 +1359,20 @@ footer .footer-1 {
   .chart {
     width: 93%; 
     margin-bottom: 5rem;
+  }
+  .galeri-wrapper{
+    width: 90%;
+  }
+  .galeri-wrapper .galeri-image img{
+    width: 29rem;
+  }
+  .fast-wrapper{
+    width: 90%;
+  }
+  .fast-foot {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
   }
 }  
   

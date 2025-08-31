@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    // Nonaktifkan font default Tailwind
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [], // Menonaktifkan font sans-serif default
+            serif: [], // Menonaktifkan font serif default
+            mono: [], // Menonaktifkan font monospace default
+          }
+        }
+      }
+    }
+  </script>
+  <title>Profil Negeri Tuhaha</title>
+  <!-- font 1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <!-- font 4 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <!-- font 4  -->
+  <!-- icon  -->
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css" />
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+  <!-- icon  -->
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Terapkan font kustom ke seluruh halaman */
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+
+    /* Pastikan elemen khusus menggunakan font yang benar */
+    .fontkontak,
+    .judul-profil,
+    .side-judul h3,
+    .judul-footer {
+      font-family: '', 'Source Sans 3', sans-serif;
+    }
+
+    .judul-profil,
+    .side-judul {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="body2 fontkontak">
+  <!-- Konten halaman tetap sama -->
+  <header class="top-nav">
+    <button class="hamburger" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <h2 class="nav-title">Beinusa <span>Amalatu</span></h2>
+    <img src="../image/logoNegeri.png" alt="Avatar" class="nav-avatar" />
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <ul class="chat-list">
+      <li class="chat-item"><a href="../index.html">HOME</a></li>
+      <li class="chat-item has-dropdown">
+        <a href="#" class="main-sb">PROFIL</a>
+        <ul class="dropdown">
+          <li><a href="sejarah.html">Sejarah Negeri</a></li>
+          <li><a href="VisiMisi.html">Visi & Misi</a></li>
+          <li><a href="profil.html" class="drop-sb">Profil Negeri</a></li>
+        </ul>
+      </li>
+      <li class="chat-item has-dropdown">
+        <a href="#">PEMERINTAHAN NEGERI</a>
+        <ul class="dropdown">
+          <li><a href="../Struktur Pemerintahan Tuhaha/SOTK.html">SOTK Pemerintahan Negeri</a></li>
+          <li><a href="#">Kabinet</a></li>
+        </ul>
+      </li>
+      <li class="chat-item has-dropdown">
+        <a href="#">DATA NEGERI</a>
+        <ul class="dropdown">
+          <li><a href="../Data Negeri/PopulasiWilayah.html">Populasi Per Wilayah</a></li>
+          <li><a href="../Data Negeri/DataPenduduk.html">Data Penduduk Negeri</a></li>
+          <li><a href="../Data Negeri/RentangUmur.html">Data Rentang Umur</a></li>
+          <li><a href="../Data Negeri/PerUmur.html">Umur Kategori</a></li>
+          <li><a href="../Data Negeri/StatusPenduduk.html">Status Penduduk</a></li>
+          <li><a href="../Data Negeri/JenisKelamin.html">Jenis Kelamin</a></li>
+        </ul>
+      </li>
+      <li class="chat-item has-dropdown">
+        <a href="#">INFORMASI PUBLIK</a>
+        <ul class="dropdown">
+          <li><a href="#">Berita Penting</a></li>
+          <li><a href="#">Pengumuman</a></li>
+        </ul>
+      </li>
+      <li class="chat-item has-dropdown">
+        <a href="#">BERITA NEGERI</a>
+        <ul class="dropdown">
+          <li><a href="#">Agenda</a></li>
+          <li><a href="#">Laporan</a></li>
+        </ul>
+      </li>
+      <li class="chat-item has-dropdown">
+        <a href="#">GALERI NEGERI</a>
+        <ul class="dropdown">
+          <li><a href="../Galeri/foto.html">Foto</a></li>
+          <li><a href="../Galeri/video.html">Video</a></li>
+        </ul>
+      </li>
+      <li class="chat-item"><a href="#">KONTAK</a></li>
+    </ul>
+  </aside>
+
+  <main id="main" class="main-content main2">
+    <!-- gambar-home  -->
+
+    <section class="background-carousel carousel-2">
+      <button class="carousel-btn prev">&lsaquo;</button>
+      <div class="slides-container">
+        <img src="image/Tuhaha.jpg" alt="Slide 1" class="slide active" />
+        <img src="image/Tuhaha.jpg" alt="Slide 2" class="slide" />
+      </div>
+      <button class="carousel-btn next">&rsaquo;</button>
+      <div class="carousel-overlay">
+        <h2>Selamat Datang</h2>
+        <h1>Website Resmi Negeri Tuhaha</h1>
+        <p>Sumber informasi terbaru tentang pemerintahan di Negeri Tuhaha</p>
+      </div>
+    </section>
+    <!-- gambar-home  -->
+
+    <div class="element-wrapper">
+      <div class="sejarah-wrapper">
+        <div class="header-profil">
+          <h3 class="judul-profil">Sekretariat Negeri Tuhaha</h3>
+          <div class="date-profil my-2">
+            <div class="dp">
+              <i class="fi fi-rr-calendar"></i>
+              <p>13 Agustus 2025</p>
+            </div>
+            <div class="dp">
+              <i class="fi fi-rr-user"></i>
+              <p>Admin Negeri</p>
+            </div>
+          </div>
+        </div>
+        <div class="sejarah-img">
+          <img src="image/WhatsApp Image 2025-06-15 at 09.55.46_c876cbd4.jpg" alt="" class="my-5">
+        </div>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ratione? Nobis voluptatib cum est, nam
+          reprehenderit vel nisi perferendis numquam eius. Sequi et nobis animi cupiditate necessitatibus dolorum
+          quidem.</p>
+        <h3 class="font-bold mt-5">Lokasi Kantor Negeri Tuhaha</h3>
+        <div class="map-kantor">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d723.3286971946893!2d128.689384647453!3d-3.533899361111102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6b7d562d9b439f%3A0x13a77f2f28d805c8!2sKantor%20Desa!5e1!3m2!1sen!2sid!4v1756646010025!5m2!1sen!2sid"
+            width="100" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+        </div>
+      </div>
+      <div class="side-section">
+        <div class="side-berita">
+          <div class="side-judul mt-8 -mb-3">
+            <i class="fi fi-bs-document"></i>
+            <h3 class="">Artikel Berita</h3>
+          </div>
+          <div class="kontak-section ">
+            <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+              <form action="#" method="POST" class="mx-auto max-w-xl -mt-19">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                  <div>
+                    <label for="first-name" class="block text-sm/6 font-semibold text-gray-900 text-xl">nama
+                      awal</label>
+                    <div class="mt-2.5">
+                      <input id="first-name" type="text" name="first-name" autocomplete="given-name"
+                        class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="last-name" class="block text-sm/6 font-semibold text-gray-900 text-xl">nama
+                      akhir</label>
+                    <div class="mt-2.5">
+                      <input id="last-name" type="text" name="last-name" autocomplete="family-name"
+                        class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+                    </div>
+                  </div>
+
+                  <div class="sm:col-span-2">
+                    <label for="email" class="block text-sm/6 font-semibold text-gray-900 text-xl">Email</label>
+                    <div class="mt-2.5">
+                      <input id="email" type="email" name="email" autocomplete="email"
+                        class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900 text-xl">Nomor
+                      Telepon</label>
+                    <div class="mt-2.5 ">
+                      <div
+                        class="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600 ">
+                        <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                          <path
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd" fill-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <input id="phone-number" type="text" name="phone-number" placeholder="0812-3456-7890"
+                          class="block min-w-0 grow py-1.5 pr-3 pl-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 " />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="pesan" class="block text-sm/6 font-semibold text-gray-900 text-xl">Pesan</label>
+                    <div class="mt-2.5">
+                      <textarea id="message" name="message" rows="4"
+                        class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <button type="submit"
+                    class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Kirim
+                    Masukan</button>
+                </div>
+
+                <button class="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg w-full hidden">
+                  <span>Loading</span>
+                  <svg class="animate-spin ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                  </svg>
+                </button>
+
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <footer class="footer2">
+      <div class="footer-wrapper ">
+        <div class="logo">
+          <img src="../image/logoNegeri.png" alt="" />
+        </div>
+        <div class="footer-sect footer-2">
+          <h5 class="judul-footer">Hubungi Kami</h5>
+          <div class="foot-icon mb-2">
+            <i class="fi fi-rr-marker"></i>
+            <p>Kantor Pemerintah Negeri Tuhaha : Jln. Pelabuhan Tuhaha</p>
+          </div>
+          <div class="foot-icon mb-2">
+            <i class="fi fi-rr-comment-code"></i>
+            <p>Kode Pos : 97585</p>
+          </div>
+          <div class="foot-icon mb-2">
+            <i class="fi fi-br-envelope"></i>
+            <p>pemnegtuhaha@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-sect footer-3">
+          <h5 class="judul-footer">Nomor telepon penting</h5>
+          <p class="mb-4"><a href="">Loremipsumdolor.</a></p>
+          <p class="mb-4"><a href="">Loremipsumdolor.</a></p>
+        </div>
+        <div class="footer-sect footer-4">
+          <h5 class="judul-footer">Jelajahi</h5>
+          <p class="mb-4"><a href="">Website Kemendesa</a></p>
+          <p class="mb-4"><a href="">Website Kemendagri</a></p>
+          <p class="mb-4"><a href="">Cek DPT Online</a></p>
+        </div>
+      </div>
+      <p id="hak">Hak cipta @ 2025 | Pemerintah Negeri Tuhaha</p>
+    </footer>
+  </main>
+  <script src="../script.js"></script>
+</body>
+
+</html>

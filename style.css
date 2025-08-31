@@ -13,7 +13,7 @@
     --third: #A31D1D;
     --fourth: #781c1c; */
 
-body {
+body, .fontkontak{
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 350;
@@ -939,7 +939,7 @@ a {
   -o-border-radius: .8rem;
 }
 
-.side-section .side-icon{
+.side-section .sicon{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -947,11 +947,11 @@ a {
   text-decoration: none;
 }
 
-.side {
+.sicone {
   padding: .1rem;
 }
 
-.side-icon .side img {
+.sicon .sicone img {
   width: 3rem;
   position: relative;
   top: -18px;
@@ -963,12 +963,12 @@ a {
   -o-transition: .3s;
 }
 
-a .side:hover img{
+a .sicone:hover img{
   width: 3.5rem;
   top: -21px;
 }
 
-.side {
+.sicone {
   text-align: center;
   background-color: white;
   box-shadow: 0 3px 5px .1px #e1e1e1;
@@ -976,7 +976,7 @@ a .side:hover img{
   color: black;
   padding: -1rem 0;
   line-height: -5rem;
-  margin: 0 1rem 2rem;
+  margin: 0 1rem 10rem;
 }
 
 .side-berita {

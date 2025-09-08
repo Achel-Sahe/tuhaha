@@ -324,7 +324,7 @@ a {
 }
 
 .carousel-overlay img{
-  width: 9rem;
+  width: 11rem;
   height: auto;
   filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
   -webkit-filter: drop-shadow(0 1px 5px rgb(255, 255, 255));

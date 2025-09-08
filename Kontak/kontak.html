@@ -78,11 +78,11 @@
     <ul class="chat-list">
       <li class="chat-item"><a href="../index.html">HOME</a></li>
       <li class="chat-item has-dropdown">
-        <a href="#" >PROFIL</a>
+        <a href="#">PROFIL</a>
         <ul class="dropdown">
           <li><a href="sejarah.html">Sejarah Negeri</a></li>
           <li><a href="VisiMisi.html">Visi & Misi</a></li>
-          <li><a href="profil.html" >Profil Negeri</a></li>
+          <li><a href="profil.html">Profil Negeri</a></li>
         </ul>
       </li>
       <li class="chat-item has-dropdown">
@@ -179,11 +179,19 @@
         <div class="side-berita">
           <div class="side-judul mt-8 -mb-3">
             <i class="fi fi-bs-document"></i>
-            <h3 class="">Artikel Berita</h3>
+            <h3 class="">Kontak kami</h3>
           </div>
           <div class="kontak-section ">
+
             <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-              <form action="#" method="POST" class="mx-auto max-w-xl -mt-19">
+              <form action="#" method="POST" class="mx-auto max-w-xl -mt-19" name="Masukan-negeri-tuhaha">
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4 hidden alert text-lg"
+                  role="alert">
+                  <strong class="font-bold">Berhasil!</strong>
+                  <span class="block sm:inline text-black">Pesan anda sudah berhasil terkirim</span>
+                  <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                  </span>
+                </div>
                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
                     <label for="first-name" class="block text-sm/6 font-semibold text-gray-900 text-xl">nama
@@ -205,7 +213,7 @@
                   <div class="sm:col-span-2">
                     <label for="email" class="block text-sm/6 font-semibold text-gray-900 text-xl">Email</label>
                     <div class="mt-2.5">
-                      <input id="email" type="email" name="email" autocomplete="email"
+                      <input id="email" type="email" name="email" autocomplete="email" placeholder="abcd@gmail.com"
                         class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
                     </div>
                   </div>
@@ -229,18 +237,19 @@
                   <div class="sm:col-span-2">
                     <label for="pesan" class="block text-sm/6 font-semibold text-gray-900 text-xl">Pesan</label>
                     <div class="mt-2.5">
-                      <textarea id="message" name="message" rows="4"
+                      <textarea id="message" name="pesan" rows="4"
                         class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="mt-10">
                   <button type="submit"
-                    class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Kirim
+                    class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 btn-kirim">Kirim
                     Masukan</button>
                 </div>
 
-                <button class="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg w-full hidden">
+                <button
+                  class="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg w-full hidden btn-loading">
                   <span>Loading</span>
                   <svg class="animate-spin ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24">
@@ -297,6 +306,7 @@
     </footer>
   </main>
   <script src="../script.js"></script>
+  <script src="kontak.js"></script>
 </body>
 
 </html>

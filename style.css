@@ -324,7 +324,7 @@ a {
 }
 
 .carousel-overlay img{
-  width: 11rem;
+  width: 13rem;
   height: auto;
   filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
   -webkit-filter: drop-shadow(0 1px 5px rgb(255, 255, 255));
@@ -939,7 +939,7 @@ a {
   -o-border-radius: .8rem;
 }
 
-.side-section .sicon{
+.side-section .side-icon{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -947,11 +947,11 @@ a {
   text-decoration: none;
 }
 
-.sicone {
+.side {
   padding: .1rem;
 }
 
-.sicon .sicone img {
+.side-icon .side img {
   width: 3rem;
   position: relative;
   top: -18px;
@@ -963,12 +963,12 @@ a {
   -o-transition: .3s;
 }
 
-a .sicone:hover img{
+a .side:hover img{
   width: 3.5rem;
   top: -21px;
 }
 
-.sicone {
+.side {
   text-align: center;
   background-color: white;
   box-shadow: 0 3px 5px .1px #e1e1e1;
@@ -976,13 +976,12 @@ a .sicone:hover img{
   color: black;
   padding: -1rem 0;
   line-height: -5rem;
-  margin: 0 1rem 10rem;
+  margin: 0 1rem 2rem;
 }
 
 .side-berita {
   margin-bottom: 5rem;
 }
-
 .sbi-img img {
   width: 6rem;
 }
@@ -1277,7 +1276,7 @@ footer p {
 }
 
 footer .logo img {
-  width: 8rem;
+  width: 9.5rem;
 }
 footer .logo {
   display: flex;

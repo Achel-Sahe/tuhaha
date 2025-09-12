@@ -17,4 +17,7 @@
             console.log('Success!', response)
         })
       .catch(error => console.error('Error!', error.message))
-  })
+    })
+  
+const btnKontak = document.querySelector('#btnKontak');
+btnKontak.addEventListener("click", function () {alert.classList.toggle('hidden');})

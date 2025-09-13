@@ -154,4 +154,18 @@ toggle.addEventListener('click', () => {
       parent.classList.toggle('open');
     });
     });
-  
+
+    // Counter menggunakan CountAPI
+        // Ganti 'nama-desa-anda' dengan nama desa/website Anda
+        const siteName = 'Website-Negeri-Tuhaha';
+        const pageName = 'Negeri-Tuhaha';
+        
+        fetch(`https://api.countapi.xyz/hit/${siteName}/${pageName}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('counter-number').textContent = data.value.toLocaleString('id-ID');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('counter-number').textContent = '0';
+        });

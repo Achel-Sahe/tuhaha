@@ -551,7 +551,7 @@ a {
   box-shadow: 0 0px 5px 1px #bcbcbc;
 }
 
-.card-content {
+.sotk-wrapper .card-content {
   flex-grow: 1;
   padding: 16px;
   background-color: var(--third);
@@ -1756,6 +1756,14 @@ footer .footer-1 {
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 8px;
+  }
+
+  .ff-card img {
+  width: 2rem;
+  height: auto;
+}
+  .ff-card{
+    width: 6rem;
   }
   /* galeri negeri end */
 

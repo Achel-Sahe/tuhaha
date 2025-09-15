@@ -883,12 +883,8 @@ a {
   border-radius: 4px;
   object-fit: cover;
 }
-
 /* galeri negeri end  */
-
-
-
-
+/* home section end  */
 
 
 /* Profil negeri section  */
@@ -1564,6 +1560,122 @@ footer .footer-1 {
   text-decoration: underline;
 }
 /* footer section end */
+
+/* visibility content  */
+.galeri-negeri,
+.administrasi-penduduk,
+.cards-container {
+  content-visibility: auto;
+  /* placeholder tinggi kira-kira agar placeholder tidak 0 */
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Untuk container berita / grid card yang banyak dibawah fold */
+.news-grid {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px; /* placeholder tinggi ~800px, sesuaikan jika perlu */
+}
+
+/* Untuk tiap kartu berita (card) */
+.news-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px; /* tinggi rata-rata card berita */
+}
+
+/* Untuk wrapper galeri / galeri-wrapper jika banyak gambar di dalamnya */
+.galeri-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px; /* placeholder tinggi galeri */
+}
+
+/* Navigasi cepat / fast-wrapper jika berada di bawah konten utama */
+.fast-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
+/* Opsional: hanya card di news grid setelah beberapa card pertama */
+.news-grid .news-card:nth-child(n+4) { /* misalnya card ke-4 dan seterusnya */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* ==== Optimasi content-visibility untuk Data Penduduk === */
+
+/* Container utama data wrapper, terutama bagian tabel & diagram */
+.data-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px; /* placeholder tinggi kira-kira */
+}
+
+/* Spesifik bagian tabel populasi */
+.population-table {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* Bagian chart / diagram menggunakan canvas */
+.data-diagram {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px; /* placeholder tinggi agar scroll / layout stabil */
+}
+/* Pastikan bagian atas seperti carousel & header tetap langsung tampil tanpa delay */
+
+/* Optional: Hanya diagram/tabel setelah konten-atas */
+.data-wrapper table:nth-child(n+2),
+.data-wrapper .data-diagram:nth-child(n+2) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ===== Saran optimasi content-visibility untuk halaman galeri ===== */
+
+.galeri-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px; /* placeholder tinggi ≈ tinggi galeri */
+}
+
+.galeri-image img {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px; /* kira-kira tinggi tiap gambar galeri */
+}
+
+.fast-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
+
+.footer2 {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
+
+/* Opsional: hanya gambar-galeri setelah beberapa gambar pertama */
+.galeri-image img:nth-child(n+5) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
+
+/* Optimasi content-visibility untuk halaman SOTK */
+
+/* struktur section penuh */
+.Struktur-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px; /* perkiraan tinggi placeholder */
+}
+
+/* setiap kartu tambahan setelah beberapa kartu pertama */
+.Struktur-section .kartu-struktur:nth-child(n+5) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px; /* tinggi rata-rata sebuah kartu */
+}
+
+/* side-berita di samping */
+.side-berita-isi {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px; /* tergantung jumlah elemen side berita */
+}
+
+/* visibility content end */
 
 /* Untuk layar laptop*/
 @media (max-width: 1366px) {

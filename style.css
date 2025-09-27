@@ -249,7 +249,6 @@ a {
   position: relative;
   list-style: none;
   padding-left: 16px;
-  f
 }
 .has-dropdown.open .dropdown {
   display: block;
@@ -1144,7 +1143,7 @@ a .side:hover img{
   } 
 
   .chart {
-    width: 40rem;
+    width: 35rem;
     padding: 2rem;
     background-color: white;
         border-radius: .3rem;

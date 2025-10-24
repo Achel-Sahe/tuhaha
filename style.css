@@ -132,6 +132,10 @@ p {
   display: flex;
   flex-direction: column;
   z-index: 1;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
 }
 
 .sidebar.open {
@@ -931,6 +935,14 @@ article button:hover {
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+}
+article#visimisi ol li{
+  font-size: 1.15rem;
+}
+#visimisi .judul-visimisi{
+  color: red;
+  margin-bottom: -.7rem;
+  text-align: center;
 }
 
 article button {

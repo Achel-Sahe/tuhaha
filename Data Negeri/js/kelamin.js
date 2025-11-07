@@ -6,7 +6,7 @@
       labels: ['Perempuan', 'Lelaki'],
       datasets: [{
         label: 'Jenis Kelamin',
-        data: [80, 98],
+        data: [964, 1018],
         backgroundColor: [
           'rgba(209, 0, 178, 0.58)',
           'rgba(0, 134, 161, 0.58)'

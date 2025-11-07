@@ -6,7 +6,7 @@
       labels: ['Warga Negara Indonesia', 'Warga asing'],
       datasets: [{
         label: 'Jenis Kelamin',
-        data: [1000, 0],
+        data: [1982, 0],
         backgroundColor: [
           'rgba(193, 2, 2, 0.85)',
           'rgba(224, 224, 224, 0.58)'

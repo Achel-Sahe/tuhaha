@@ -1131,7 +1131,6 @@ a .side:hover img{
 }
 .kartu-struktur {
   width: 17rem;
-  height: auto;
   background-color: #781c1c;
   color: white;
   text-align: center;
@@ -1144,10 +1143,13 @@ a .side:hover img{
 
 .kartu-struktur .kartu-img {
   width: 100%;
+  object-fit: cover;
 }
 .kartu-struktur img {
   border-radius:.5rem .5rem 0 0 ;
-  width: 100%;
+  width:100%;
+  height: 20rem;
+  object-fit: cover;
   -webkit-border-radius:.5rem .5rem 0 0 ;
   -moz-border-radius:.5rem .5rem 0 0 ;
   -ms-border-radius:.5rem .5rem 0 0 ;
@@ -1162,7 +1164,6 @@ a .side:hover img{
   font-size: .9rem;
   padding-bottom: 1rem;
 }
-
 /* SOTK end */
 /* struktur pemerintahan negeri tuhaha end  */
 
@@ -1386,6 +1387,8 @@ a .side:hover img{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    align-items: center;
+    height: 40rem;
     justify-content: space-evenly;
 }
 
@@ -1400,6 +1403,7 @@ a .side:hover img{
     border: 1px solid rgb(169, 0, 0);
     backdrop-filter: blur(10px);
     width: 25rem;
+    height: auto;
 }
 .news-card:hover {
     transform: translateY(-12px) scale(1.02);
@@ -1412,9 +1416,9 @@ a .side:hover img{
     height: 220px;
     position: relative;
     overflow: hidden;
-}
-
-.card-image img {
+  }
+  
+  .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1423,6 +1427,10 @@ a .side:hover img{
 
 .news-card:hover .card-image img {
     transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
 }
 
 .image-overlay {

@@ -884,7 +884,7 @@ a {
 
 .gallery img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16/9;
   display: block;
   border-radius: 4px;
   object-fit: cover;
@@ -1388,7 +1388,7 @@ a .side:hover img{
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
-    height: 40rem;
+    height: auto;
     justify-content: space-evenly;
 }
 
@@ -1404,6 +1404,7 @@ a .side:hover img{
     backdrop-filter: blur(10px);
     width: 25rem;
     height: auto;
+    margin: 3rem 0;
 }
 .news-card:hover {
     transform: translateY(-12px) scale(1.02);

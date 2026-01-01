@@ -111,8 +111,8 @@ p {
 }
 
 .nav-avatar {
-  width: 42px;
-  height: 42px;
+  width:55px;
+  height: auto;
   object-fit: cover;
   margin-left: auto;
   flex-shrink: 0;
@@ -888,6 +888,12 @@ a {
   display: block;
   border-radius: 4px;
   object-fit: cover;
+}
+
+.video  {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
 }
 /* galeri negeri end  */
 /* home section end  */
